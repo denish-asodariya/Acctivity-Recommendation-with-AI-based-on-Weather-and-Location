@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Activity Recommendation React Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This React web application provides real-time activity recommendations based on the user's current location and weather conditions. It utilizes the OpenAI Chat Completion API to generate recommendations for restaurants, musical events, and sports events. The recommendations are then displayed on a Google Map, along with the user's current location and information obtained from the SerpAPI for real-time search results.
+
+## Features
+
+- **Real-Time Recommendations**: Clicking on the "Recommended For You" button triggers the generation of recommendations using the OpenAI Chat Completion API. The recommendations include 3 restaurants, 3 musical events, and 3 sports events.
+  
+- **Google Map Integration**: A popup window appears displaying a Google Map with 10 markers:
+  - Current user location (Green marker)
+  - 3 markers for restaurants
+  - 3 markers for musical events/concerts
+  - 3 markers for sports events
+  
+- **Real-Time Data**: Real-time data for current weather conditions, events, and location of the user is fetched from various APIs:
+  - Weather data is obtained from [Open-Meteo](https://open-meteo.com/) or [OpenWeatherMap](https://openweathermap.org/api)
+  - User location is retrieved using [ipapi](https://ipapi.co/json/)
+  - Real-time search results are fetched from [SerpAPI](https://serpapi.com/dashboard)
+  
+- **Customizable**: The application is built using React and Material UI, making it easy to customize and extend as per requirements.
+
+## Installation and Usage
+
+1. Replace all API keys in the `FetchRecommendation.js` (OpenAI Key) and `server.js` (SerpAPI Key) files, and in the `index.html` (Google Map API) file.
+2. Run `npm install` to install dependencies.
+3. Start the backend server by running `node server.js`.
+4. Start the React app by running `npm start`.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `npm start`: Runs the app in development mode.
+- `npm test`: Launches the test runner in interactive watch mode.
+- `npm run build`: Builds the app for production to the `build` folder.
+- `npm run eject`: Ejects the app from Create React App, allowing full control over configurations.
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [Create React App Documentation](https://facebook.github.io/create-react-app/docs/getting-started)
+- [React Documentation](https://reactjs.org/docs/getting-started.html)
+- [Material-UI Documentation](https://mui.com/getting-started/usage/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Troubleshooting
 
-### Code Splitting
+If you encounter any issues or have questions, please refer to the documentation links provided above or reach out for support.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Credits
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was developed as part of a software development assignment, leveraging various APIs and technologies to deliver real-time activity recommendations to users.
